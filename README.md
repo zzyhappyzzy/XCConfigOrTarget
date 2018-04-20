@@ -1,6 +1,10 @@
 # XCConfigOrTarget
 Xcode config file or multiple targets for different environment
 
+# 开发环境
+macOS High Sierra 10.13.4(17E199)
+Xcode Version 9.3 (9E145)
+
 # 说明
 正常来说，一个project对应一个target，但苹果证书体系和开发过程、测试、发布等因素，很多时候一个project需要应付不同的需求，这个时候，通常有两种选择
 1. 多target
