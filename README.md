@@ -1,8 +1,9 @@
-# XCConfigOrTarget
-Xcode config file or multiple targets for different environment
+# Configs VS Targets
+`multiple config files` VS `multiple targets` for different environments
 
 # 开发环境
 macOS High Sierra 10.13.4(17E199)
+
 Xcode Version 9.3 (9E145)
 
 # 说明
