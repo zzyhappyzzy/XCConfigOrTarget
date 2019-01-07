@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F3A87A6649E42E2A63DD4A7 /* libPods-XCConfigDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1569275FF3E732D2858AD6 /* libPods-XCConfigDemo.a */; };
 		9F2B9A1F208980D30054E63C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B9A1E208980D30054E63C /* AppDelegate.m */; };
 		9F2B9A22208980D30054E63C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2B9A21208980D30054E63C /* ViewController.m */; };
 		9F2B9A25208980D30054E63C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F2B9A23208980D30054E63C /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		9F2B9A93208985F40054E63C /* QATest.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = QATest.xcconfig; sourceTree = "<group>"; };
 		9F2B9A94208986830054E63C /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		9F2B9A95208986900054E63C /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		CD1569275FF3E732D2858AD6 /* libPods-XCConfigDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XCConfigDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F3A87A6649E42E2A63DD4A7 /* libPods-XCConfigDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E876A2BE3CC407CE1DD5EE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD1569275FF3E732D2858AD6 /* libPods-XCConfigDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3767D46B8ED78BBA21464D3D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9F2B9A11208980D30054E63C = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +109,8 @@
 				9F2B9A35208980D40054E63C /* XCConfigDemoTests */,
 				9F2B9A40208980D40054E63C /* XCConfigDemoUITests */,
 				9F2B9A1B208980D30054E63C /* Products */,
+				3767D46B8ED78BBA21464D3D /* Pods */,
+				1E876A2BE3CC407CE1DD5EE3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +165,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F2B9A46208980D40054E63C /* Build configuration list for PBXNativeTarget "XCConfigDemo" */;
 			buildPhases = (
+				FE0FB968E7D96FF1810CA616 /* [CP] Check Pods Manifest.lock */,
 				9F2B9A96208993790054E63C /* Run Script */,
 				9F2B9A16208980D30054E63C /* Sources */,
 				9F2B9A17208980D30054E63C /* Frameworks */,
@@ -277,7 +298,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./beforeBuildShell.sh ";
+			shellScript = "./beforeBuildShell.sh \n";
+		};
+		FE0FB968E7D96FF1810CA616 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XCConfigDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
